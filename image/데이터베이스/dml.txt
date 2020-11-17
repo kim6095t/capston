@@ -1,0 +1,49 @@
+select
+-select * from student;
+-select * from STUDENT = select * from DB123.STUDENT
+
+
+insert
+-insert into student values (100,'나수영',4,'컴퓨터');
+-insert into student(sname,sno,year,dept) values('이찬수',200,3,'전기');
+-insert into student select~~
+
+
+update
+-update student set year=year+1 where year=1;
+
+
+delete
+-delete student where dept='전기';
+-delete student; -모든 행 삭제
+
+
+
+select distinct sno
+-where은 조건, distinct는 중복값 없앰
+
+order by midterm asc/desc;
+-오름차순 내림차순
+
+like '%병_';
+-해당글자만 출력
+
+year in (1, 2);
+-주어진 값들에 포함되는 것만 검색, 숫자만 가능
+
+between 1 and 3
+-사잇값
+
+-집계함수
+avg(), count(), max(), min(), sum(), first(), last()
+
+select sno as 학번, sname as name from STUDENT
+-alias
+
+select cno,avg(finterm) from enrol group by cno having count(*)>=3;
+-group by
+-having
+
+
+commit;
+rollback;
